@@ -12,7 +12,8 @@ const Sidebar = () => {
   const menu = [
     { label: 'Dashboard', path: '/dashboard', roles: ['admin', 'student'] },
     { label: 'Questions', path: '/questions', roles: ['admin'] },
-    { label: 'Tests', path: '/tests', roles: ['student'] },
+    { label: 'Reports', path: '/reports/', roles: ['admin'] },
+    { label: 'Tests Start', path: '/tests/start', roles: ['student'] },
     { label: 'Certificates', path: '/certificates', roles: ['student'] }
   ];
 

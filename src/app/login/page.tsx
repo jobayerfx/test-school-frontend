@@ -30,12 +30,12 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100 p-6">
-      <div className="w-full max-w-md rounded-lg bg-white p-8 shadow-lg">
-        <h1 className="mb-2 text-center text-3xl font-bold text-gray-800">
+    <div className="flex min-h-screen items-center justify-center bg-gray-900 p-6">
+      <div className="w-full max-w-md rounded-lg bg-gray-800 p-8 shadow-lg">
+        <h1 className="mb-2 text-center text-3xl font-bold text-gray-200">
           Welcome Back!
         </h1>
-        <p className="mb-6 text-center text-sm text-gray-600">
+        <p className="mb-6 text-center text-sm text-gray-400">
           Login with your credentials.
         </p>
         
@@ -52,7 +52,7 @@ export default function LoginPage() {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="mt-1 w-full rounded border-gray-300 p-2 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+              className="mt-1 w-full rounded border-gray-600 bg-gray-700 text-white p-2 shadow-sm focus:border-indigo-400 focus:ring-indigo-400"
               required
             />
           </div>
@@ -65,13 +65,13 @@ export default function LoginPage() {
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="mt-1 w-full rounded border-gray-300 p-2 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+              className="mt-1 w-full rounded border-gray-600 bg-gray-700 text-white p-2 shadow-sm focus:border-indigo-400 focus:ring-indigo-400"
               required
             />
           </div>
           <button
             type="submit"
-            className="w-full rounded bg-indigo-600 py-2 px-4 text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            className="w-full rounded bg-indigo-500 py-2 px-4 text-white hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2"
             disabled={isLoading}
           >
             {isLoading ? 'Logging in...' : 'Login'}
@@ -92,12 +92,12 @@ export default function LoginPage() {
             </p>
           )}
           <div className="mt-4 text-center">
-            <a href="/forgot-password" className="text-sm text-indigo-600 hover:underline">
+            <a href="/forgot-password" className="text-sm text-indigo-400 hover:text-indigo-300 hover:underline">
               Forgot Password?
             </a>
           </div>
           <div className="mt-2 text-center">
-            <a href="/register" className="text-sm text-indigo-600 hover:underline">
+            <a href="/register" className="text-sm text-indigo-400 hover:text-indigo-300 hover:underline">
               Create New Account
             </a>
           </div>

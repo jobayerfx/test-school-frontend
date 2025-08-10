@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Interface Demo - Professional UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <!-- Header -->
+    <div class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-900">Test Session</h1>
+                    <p class="text-sm text-gray-600 mt-1">
+                        Question 1 of 5 • 3 answered
+                    </p>
+                </div>
+                <!-- Timer Component -->
+                <div class="flex items-center space-x-4">
+                    <div class="inline-flex items-center px-4 py-2 rounded-lg border-2 text-green-600 bg-green-50 border-green-200 transition-colors duration-300">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <div class="text-right">
+                            <div class="text-xs font-medium opacity-75">Time Remaining</div>
+                            <div class="text-lg font-bold font-mono">45:30</div>
+                        </div>
+                    </div>
+                    <div class="hidden sm:block w-24">
+                        <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                            <div class="h-full transition-all duration-1000 ease-linear bg-green-500" style="width: 75%"></div>
+                        </div>
+                        <div class="text-xs text-gray-500 mt-1 text-center">Progress</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <!-- Question Navigation Sidebar -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-xl shadow-sm p-6 sticky top-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Questions</h3>
+                    <div class="grid grid-cols-5 lg:grid-cols-4 gap-2">
+                        <button class="w-10 h-10 rounded-lg text-sm font-medium transition-all duration-200 bg-indigo-600 text-white shadow-md">1</button>
+                        <button class="w-10 h-10 rounded-lg text-sm font-medium transition-all duration-200 bg-green-100 text-green-700 hover:bg-green-200">2</button>
+                        <button class="w-10 h-10 rounded-lg text-sm font-medium transition-all duration-200 bg-green-100 text-green-700 hover:bg-green-200">3</button>
+                        <button class="w-10 h-10 rounded-lg text-sm font-medium transition-all duration-200 bg-gray-100 text-gray-600 hover:bg-gray-200">4</button>
+                        <button class="w-10 h-10 rounded-lg text-sm font-medium transition-all duration-200 bg-gray-100 text-gray-600 hover:bg-gray-200">5</button>
+                    </div>
+                    <div class="mt-6 space-y-2 text-sm">
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">Answered:</span>
+                            <span class="font-medium text-green-600">3</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600">Remaining:</span>
+                            <span class="font-medium text-orange-600">2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Question Area -->
+            <div class="lg:col-span-3">
+                <div class="bg-white rounded-xl shadow-sm">
+                    <!-- Question Header -->
+                    <div class="px-6 py-4 border-b border-gray-200">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-medium text-indigo-600">Question 1</span>
+                            <div class="flex items-center space-x-2">
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                    <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                    Answered
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question Content -->
+                    <div class="px-6 py-6">
+                        <h2 class="text-xl font-medium text-gray-900 mb-6 leading-relaxed">
+                            What is the primary purpose of React's useState hook?
+                        </h2>
+
+                        <!-- Options -->
+                        <div class="space-y-3">
+                            <label class="flex items-center p-4 rounded-lg border-2 border-indigo-500 bg-indigo-50 text-indigo-900 cursor-pointer transition-all duration-200">
+                                <div class="w-5 h-5 rounded-full border-2 mr-4 flex items-center justify-center border-indigo-500 bg-indigo-500">
+                                    <div class="w-2 h-2 rounded-full bg-white"></div>
+                                </div>
+                                <span class="text-gray-900 font-medium">To manage component state in functional components</span>
+                            </label>
+                            
+                            <label class="flex items-center p-4 rounded-lg border-2 border-gray-200 hover:border-gray-300 hover:bg-gray-50 cursor-pointer transition-all duration-200">
+                                <div class="w-5 h-5 rounded-full border-2 mr-4 flex items-center justify-center border-gray-300">
+                                </div>
+                                <span class="text-gray-900 font-medium">To handle side effects in components</span>
+                            </label>
+                            
+                            <label class="flex items-center p-4 rounded-lg border-2 border-gray-200 hover:border-gray-300 hover:bg-gray-50 cursor-pointer transition-all duration-200">
+                                <div class="w-5 h-5 rounded-full border-2 mr-4 flex items-center justify-center border-gray-300">
+                                </div>
+                                <span class="text-gray-900 font-medium">To optimize component performance</span>
+                            </label>
+                            
+                            <label class="flex items-center p-4 rounded-lg border-2 border-gray-200 hover:border-gray-300 hover:bg-gray-50 cursor-pointer transition-all duration-200">
+                                <div class="w-5 h-5 rounded-full border-2 mr-4 flex items-center justify-center border-gray-300">
+                                </div>
+                                <span class="text-gray-900 font-medium">To create reusable component logic</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Footer -->
+                    <div class="px-6 py-4 border-t border-gray-200 flex justify-between items-center">
+                        <button disabled class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg opacity-50 cursor-not-allowed transition-colors duration-200">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                            </svg>
+                            Previous
+                        </button>
+
+                        <div class="flex space-x-3">
+                            <button class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200">
+                                Next
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Demo Features Panel -->
+    <div class="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm">
+        <h4 class="font-semibold text-gray-900 mb-2">✨ New Features</h4>
+        <ul class="text-sm text-gray-600 space-y-1">
+            <li>• Professional gradient background</li>
+            <li>• Question navigation sidebar</li>
+            <li>• Enhanced countdown timer</li>
+            <li>• Visual answer indicators</li>
+            <li>• Smooth transitions & hover effects</li>
+            <li>• Progress tracking</li>
+            <li>• Responsive design</li>
+        </ul>
+    </div>
+
+    <script>
+        // Add some interactivity for demo purposes
+        document.querySelectorAll('label').forEach(label => {
+            label.addEventListener('click', function() {
+                // Remove selection from other options
+                document.querySelectorAll('label').forEach(l => {
+                    l.className = l.className.replace('border-indigo-500 bg-indigo-50 text-indigo-900', 'border-gray-200 hover:border-gray-300 hover:bg-gray-50');
+                    const radio = l.querySelector('.w-5.h-5.rounded-full');
+                    radio.className = radio.className.replace('border-indigo-500 bg-indigo-500', 'border-gray-300');
+                    const dot = radio.querySelector('.w-2.h-2');
+                    if (dot) dot.remove();
+                });
+                
+                // Add selection to clicked option
+                this.className = this.className.replace('border-gray-200 hover:border-gray-300 hover:bg-gray-50', 'border-indigo-500 bg-indigo-50 text-indigo-900');
+                const radio = this.querySelector('.w-5.h-5.rounded-full');
+                radio.className = radio.className.replace('border-gray-300', 'border-indigo-500 bg-indigo-500');
+                if (!radio.querySelector('.w-2.h-2')) {
+                    const dot = document.createElement('div');
+                    dot.className = 'w-2 h-2 rounded-full bg-white';
+                    radio.appendChild(dot);
+                }
+            });
+        });
+
+        // Question navigation
+        document.querySelectorAll('.lg\\:col-span-1 button').forEach((btn, index) => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.lg\\:col-span-1 button').forEach(b => {
+                    b.className = b.className.replace('bg-indigo-600 text-white shadow-md', 'bg-gray-100 text-gray-600 hover:bg-gray-200');
+                });
+                this.className = this.className.replace('bg-gray-100 text-gray-600 hover:bg-gray-200', 'bg-indigo-600 text-white shadow-md');
+                this.className = this.className.replace('bg-green-100 text-green-700 hover:bg-green-200', 'bg-indigo-600 text-white shadow-md');
+                
+                // Update question number in header
+                document.querySelector('.text-sm.font-medium.text-indigo-600').textContent = `Question ${index + 1}`;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -38,14 +38,14 @@ export default function TestHistoryPage() {
       <h1 className="text-xl font-bold mb-4">Test History</h1>
       <table className="border w-full">
         <thead>
-          <tr className="bg-gray-200">
+          <tr className="bg-gray-600">
             <th className="p-2">Date</th>
             <th className="p-2">Score</th>
             <th className="p-2">Status</th>
           </tr>
         </thead>
         <tbody>
-          {data?.map((t: any, idx: number) => (
+          {data.data && data.data?.map((t: any, idx: number) => (
             <tr key={idx} className="border-t">
               <td className="p-2">{new Date(t.date).toLocaleString()}</td>
               <td className="p-2">{t.score}</td>

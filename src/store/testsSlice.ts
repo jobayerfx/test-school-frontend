@@ -21,10 +21,10 @@ export const testsApi = createApi({
       })
     }),
     saveAnswer: builder.mutation({
-      query: ({ sessionId, answer }) => ({
+      query: ({ sessionId, answers }) => ({
         url: `/tests/${sessionId}/answer`,
         method: 'POST',
-        body: answer
+        body: {answers: answers}
       })
     }),
     submitTest: builder.mutation({
