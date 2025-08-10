@@ -1,0 +1,26 @@
+export const COMPETENCIES = [
+    "Critical Thinking",
+    "Problem Solving",
+    "Communication Skills",
+    "Collaboration & Teamwork",
+    "Creativity & Innovation",
+    "Adaptability",
+    "Time Management",
+    "Self-Motivation",
+    "Decision Making",
+    "Emotional Intelligence",
+    "Leadership Skills",
+    "Digital Literacy",
+    "Numeracy Skills",
+    "Literacy & Comprehension",
+    "Analytical Reasoning",
+    "Attention to Detail",
+    "Research Skills",
+    "Conflict Resolution",
+    "Learning Agility",
+    "Goal Setting",
+    "Resilience & Stress Management",
+    "Ethics & Integrity",
+  ] as const;
+  
+export const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const;
